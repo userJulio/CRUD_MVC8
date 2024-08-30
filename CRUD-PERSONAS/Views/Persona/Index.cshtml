@@ -1,0 +1,108 @@
+﻿@* @model List<Personas> *@
+@{
+    ViewData["Title"] = "Personas";
+
+}
+
+<div id="tbPerson">
+    <p class="text-danger text-center" id="idmensaje">
+
+    </p>
+    <div class="col">
+        <button class="btn btn-primary" id="idAgregar" >Agregar</button>
+    </div>
+    <table class="table" id="tbPersonas">
+    </table>
+
+  @*  <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Edad</th>
+                <th>Dni</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Nombres</td>
+                    <td>@item.Apellidos</td>
+                    <td>@item.Edad</td>
+                    <td>@item.Dni</td>
+                    <td>
+                        <button class="btn btn-primary" onclick="ModalEditar(@item.Id)">Editar</button>
+                        <button class="btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+
+
+            }
+
+            
+
+        </tbody>
+        
+   </table> *@
+
+
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="idmodalpersona" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="titlemodal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="close-modal" > X</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="text-danger text-center" id="idMensajeForm">
+
+                </div>
+               
+
+              <form  id="formularioEditarPersona"  >
+                  <input type="hidden" name="id" id="idPerson" />
+                    <div class="form-group">
+                        <label  class="col-form-label">Nombre:</label>
+                        <input type="text" class="form-control" name="nombres"  >
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-form-label">Apellidos:</label>
+                        <input type="text" class="form-control" name="apellidos" >
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Edad:</label>
+                        <input type="text" class="form-control" name="edad" id="idedad"  >
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Dni:</label>
+                        <input type="text" class="form-control" name="dni" >
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary" id="btnEditarPersona">Guardar</button>
+                        <button type="button" class="btn btn-secondary close-modal" >Cancelar</button>
+                    </div>
+                </form>
+                
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+<script type="module" src="./js/Persona.js" ></script>
+
+
+}
+

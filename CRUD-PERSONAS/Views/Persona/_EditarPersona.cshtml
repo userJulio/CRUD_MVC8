@@ -1,0 +1,33 @@
+﻿@model Personas
+@{
+
+}
+
+<form method="post" >
+    <div class="form-group">
+        <label  class="col-form-label">Nombre:</label>
+        <input type="text" class="form-control"  asp-for="Nombres" >
+    </div>
+    <div class="form-group">
+        <label  class="col-form-label">Apellidos:</label>
+        <input type="text" class="form-control"  asp-for="Apellidos" >
+    </div>
+    <div class="form-group">
+        <label class="col-form-label">Edad:</label>
+        <input type="text" class="form-control" asp-for="Edad">
+    </div>
+    <div class="form-group">
+        <label class="col-form-label">Dni:</label>
+        <input type="text" class="form-control" asp-for="Dni" >
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button class="btn btn-secondary" >Cancelar</button>
+    </div>
+
+</form>
+
+<script type="text/javascript">
+
+</script>
+

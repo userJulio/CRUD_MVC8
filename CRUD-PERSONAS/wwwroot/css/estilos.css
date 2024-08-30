@@ -1,0 +1,9 @@
+﻿
+
+.form-control.errorinput {
+    border: 1px solid #c21818;
+}
+
+.form-contrl.inputvalido {
+    border: 1px solid #ced4da;
+}
